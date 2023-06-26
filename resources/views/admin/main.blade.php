@@ -8,7 +8,7 @@
     @include('admin.template.global_css')
 </head>
 <body>
-    <div id="admin"> </div>
+     <div id="admin"> </div> 
     @include('admin.template.global_js')
 </body>
 </html>
