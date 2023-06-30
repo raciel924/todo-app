@@ -1,5 +1,4 @@
 <template>
-<v-app>
     <v-navigation-drawer app clipped permanent>
       <!-- Contenido del sidebar -->
       <v-list
@@ -18,14 +17,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-main>
-        <router-view></router-view>
-      <v-container>
-        <!-- Contenido -->
-      </v-container>
-    </v-main>
-  </v-app>
-
 </template>
 
 <script>
@@ -33,6 +24,7 @@ export default {
     data() {
     return {
         items: [
+           { title:'Login', icon:'mdi mdi-exit-to-app', to: 'login' },
             { title: 'Crear tarea', icon: 'mdi mdi-pencil', to:'create-task' },
             { title: 'Listar tareas', icon: 'mdi mdi-format-list-numbered-rtl', to: 'list-task' },
             { title: 'tareas completadas', icon: 'mdi mdi-check', to: 'list-completed-task' },

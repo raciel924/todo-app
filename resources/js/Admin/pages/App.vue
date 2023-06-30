@@ -1,8 +1,12 @@
 <template>
-    <div>
-        <sidebar/>
-        <h1>prueba</h1>
-    </div>
+   <v-app>
+    <sidebar/>
+    <v-main>
+      <v-container>
+        <router-view></router-view>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>

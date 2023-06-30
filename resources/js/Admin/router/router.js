@@ -7,6 +7,9 @@ import ListPending from '../pages/tasks/ListPendingTasks';
 import CompletedTask from '../pages/tasks/CompletedTask';
 import DelateTask from '../pages/tasks/DelateTask';
 import LogOut from '../Auth/LogOut';
+import Login from '../Auth/Login';
+import Register from '../Auth/Register';
+import LayoutMain from '../common/LayoutMain';
 Vue.use(VueRouter);
 
 let routes = [
@@ -44,7 +47,17 @@ let routes = [
         path: '/log-out',
         name: 'log-out',
         component: LogOut,
-    }
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login,
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: Register,
+    },
 ]
 export default new VueRouter({
     mode:"history",
