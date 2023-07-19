@@ -1,6 +1,7 @@
 <template>
     <v-container>
         <h3>lista de tareas</h3>
+        <v-card >
            <v-card-title></v-card-title> 
            <v-card-text></v-card-text>
         </v-card>

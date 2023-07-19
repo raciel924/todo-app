@@ -460,6 +460,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2779,9 +2780,7 @@ var render = function () {
     [
       _c("h3", [_vm._v("lista de tareas")]),
       _vm._v(" "),
-      _c("v-card-title"),
-      _vm._v(" "),
-      _c("v-card-text"),
+      _c("v-card", [_c("v-card-title"), _vm._v(" "), _c("v-card-text")], 1),
     ],
     1
   )
