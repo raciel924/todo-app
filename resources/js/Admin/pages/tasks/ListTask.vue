@@ -1,9 +1,15 @@
 <template>
     <v-container>
         <h3>lista de tareas</h3>
-        <v-card >
-           <v-card-title></v-card-title> 
-           <v-card-text></v-card-text>
+        <v-card v-for="data in getdata" :key="data.id" >
+           <v-card-title>{{ data.name }}</v-card-title> 
+           <v-card-text>{{ data.description }} </v-card-text>
+           <div>
+        <p v-if="data.state === 'pendiente'" class="pendiente">{{ data.state }}</p>
+        <p v-else-if="data.state === 'Trabajando'" class="trabajando">{{ data.state }}</p>
+        <p v-else class="terminada">{{ data.state }}</p>
+    
+      </div>
         </v-card>
     </v-container>
 </template>
@@ -27,3 +33,16 @@
  }
 
 </script>
+<style scoped>
+.pendiente {
+  color: red; /* Cambia el color según tus necesidades */
+}
+
+.trabajando {
+  color: blue; /* Cambia el color según tus necesidades */
+}
+
+.terminada {
+  color: green; /* Cambia el color según tus necesidades */
+}
+</style>

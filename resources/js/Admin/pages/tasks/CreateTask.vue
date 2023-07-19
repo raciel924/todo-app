@@ -71,6 +71,7 @@
                     }
                     setdata.push(data)
                     localStorage.setItem("DataTask",JSON.stringify(setdata));
+                    this.id = this.id+1
                 }else
                 {
                     console.log('todo mal')
@@ -78,7 +79,7 @@
                 
             },
             generateID(){
-                return `abc${this.id}`
+                return Math.random().toString(36).substr(2, 9); 
             }
         }
     }
