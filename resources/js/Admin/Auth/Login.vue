@@ -57,7 +57,7 @@ export default {
       {
         if(authUser.correo == this.email && authUser.contrasena == this.password) {
           localStorage.setItem('AuthConfirm', true);
-          this.$router.push({ name: 'list-task' });
+          this.$router.replace({ name: 'list-task' });
         }else{
           console.log('contra incorrecta');
         }
@@ -65,6 +65,14 @@ export default {
       }
      
     },
+      alert(icon, title, text)
+      {
+        this.$swal(
+        icon,
+        title,
+        text,
+        );
+      }
   },
 }
 
