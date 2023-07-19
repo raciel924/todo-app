@@ -88,9 +88,11 @@ const router = new VueRouter({
             name: 'register',
             component: Register,
             beforeEnter: (to, from, next) => {
-                if(localStorage.getItem('AuthConfirm')){
+                if(!localStorage.getItem('AuthConfirm')){
+                    next();
+                }else {
                     next({name: 'list-completed-task' })
-                }
+                } 
             }
             
         },
